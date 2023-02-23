@@ -1,0 +1,66 @@
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: max-content;
+  background-color: transparent;
+  height: 100vh;
+  width: 100%;
+  gap: 1rem;
+  &_photo {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+    background-image: url("../assets/building.jpg");
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    filter: blur(2px);
+  }
+  & > h1 {
+    font-size: 4rem;
+    font-weight: 600;
+    font-family: sans-serif;
+    color: white;
+    z-index: 1;
+    text-align: center;
+  }
+  &_inputGroup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 50rem;
+    width: 100%;
+    min-width: 20rem;
+    gap: 1rem;
+    z-index: 1;
+    & > input {
+      height: 3.5rem;
+      width: 100%;
+      border-radius: 1rem;
+      outline: none;
+      border: 1px solid rgb(200, 200, 200);
+      padding: 0 1rem;
+      box-shadow: 1px 1px 5px 5px rgb(150, 150, 150, 0.2);
+      background-color: white;
+    }
+    & > button {
+      height: 3.5rem;
+      width: 10rem;
+      border-radius: 1rem;
+      outline: none;
+      border: 0;
+      background-color: #0f71a8;
+      color: white;
+      font-weight: 600;
+      font-size: 1.4rem;
+      cursor: pointer;
+      &:hover {
+        background-color: #09476b;
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.properties {
+  width: 100%;
+  padding: 1.5rem;
+  &_header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  &_createButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    border-radius: 0.5rem;
+    background-color: green;
+    color: white;
+    font-size: 1.4em;
+    padding: 0 1rem;
+    cursor: pointer;
+  }
+  &_list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}

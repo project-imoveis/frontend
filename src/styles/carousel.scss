@@ -1,0 +1,17 @@
+.carouselWidget {
+  background-color: whitesmoke;
+  height: 100%;
+  border-radius: 1rem;
+  &_imageGroup_img {
+    height: 100%;
+    object-fit: contain;
+    object-position: 50%;
+  }
+  &-fixed {
+    height: 30rem;
+  }
+  &_imageGroup_img-fixed {
+    height: 30rem;
+    width: auto;
+  }
+}

@@ -1,0 +1,119 @@
+.propertyPage {
+  width: 100%;
+  min-height: 150vh;
+  background-color: white;
+  &_content {
+    padding: 2rem;
+    &_title {
+      font-size: 2rem;
+      color: rgb(50, 50, 50);
+      margin-bottom: 1rem;
+    }
+    &_banner {
+      display: flex;
+
+      &_carousel {
+        min-width: 50rem;
+        height: 30rem;
+      }
+      &_resume {
+        margin-left: 1rem;
+        padding: 2.5rem;
+        border-radius: 1rem;
+        background-color: whitesmoke;
+        width: -webkit-fill-available;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        & > a {
+          height: 3rem;
+          font-weight: 500;
+          font-size: 1.4em;
+          gap: 1rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: white;
+          border-radius: 0.5rem;
+
+          background-color: green;
+        }
+        &_value {
+          display: flex;
+          width: 100%;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 1rem;
+          & > label {
+            font-size: 1.5rem;
+            color: rgb(50, 50, 50);
+          }
+          & > h1 {
+            font-size: 2.2rem;
+            color: rgb(50, 50, 50);
+          }
+        }
+        &_general {
+          display: flex;
+          width: 100%;
+          justify-content: space-between;
+          align-items: center;
+          & > label {
+            font-size: 1.2rem;
+            color: rgb(50, 50, 50);
+          }
+          & > h1 {
+            font-size: 1.5rem;
+            color: rgb(50, 50, 50);
+          }
+        }
+        &_contato {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          gap: 1rem;
+          & > h1 {
+            font-size: 2rem;
+            color: rgb(50, 50, 50);
+            text-align: center;
+          }
+          & > div {
+            display: flex;
+            justify-content: space-between;
+            & > input {
+              height: 3rem;
+              width: 48%;
+              border-radius: 0.5rem;
+              padding: 0rem 1rem;
+              outline: none;
+              border: none;
+              font-size: 1.3em;
+              border: 1px solid rgb(200, 200, 200);
+            }
+          }
+
+          > input {
+            height: 3rem;
+            border-radius: 0.5rem;
+            padding: 0 1rem;
+            outline: none;
+            border: none;
+            font-size: 1.3em;
+            border: 1px solid rgb(200, 200, 200);
+          }
+          & > button {
+            height: 3rem;
+            border-radius: 0.5rem;
+            padding: 0 1rem;
+            outline: none;
+            border: none;
+            font-size: 1.3em;
+            background-color: rgb(50, 50, 50);
+            color: white;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

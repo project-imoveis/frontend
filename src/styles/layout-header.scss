@@ -1,0 +1,77 @@
+.layoutHeader {
+  background-color: rgb(245, 245, 245);
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgb(235, 235, 235);
+  &_title {
+    font-size: 1.3em;
+    letter-spacing: 0.05em;
+    color: #292929;
+    font-weight: 600;
+  }
+  &-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &_icon {
+      margin: 0 0.5rem;
+      width: 1.5rem;
+      height: 1.5rem;
+      flex-shrink: 0;
+      color: rgb(170, 170, 170);
+      position: relative;
+      &:hover {
+        color: rgb(50, 50, 50);
+        cursor: pointer;
+      }
+    }
+  }
+  &-profile {
+    padding: 0.3rem 0.5rem;
+    margin-left: 1.5rem;
+    display: flex;
+    align-items: center;
+    &_link {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      &_name {
+        font-size: 1em;
+        color: #202020;
+        font-weight: 400;
+        line-height: 1.25rem;
+      }
+      &_photo {
+        display: inline-block;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 100%;
+      }
+    }
+    &:hover {
+      background-color: #d2d2d2;
+      border-radius: 0.5rem;
+    }
+  }
+}
+.notification-badge {
+  position: relative;
+  &:before {
+    content: "";
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: #d62952;
+    color: white;
+    position: absolute;
+    border-radius: 100%;
+    top: -0.2rem;
+    right: 0.2rem;
+  }
+}

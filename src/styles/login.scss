@@ -1,0 +1,108 @@
+.login {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
+  background: linear-gradient(140deg, rgba(240, 218, 198, 0.5) 24%, rgba(216, 238, 238, 0.5) 79%);
+  &_content {
+    background-color: white;
+    padding: 3rem 2rem;
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid rgb(180, 180, 180);
+    box-shadow: 0px 0px 8px 8px rgba(200, 200, 200, 0.5);
+  }
+  h1 {
+    color: rgb(63, 63, 63);
+    font-size: 1.8em;
+    font-weight: 400;
+  }
+  h2 {
+    color: rgb(100, 100, 100);
+    font-size: 1.2em;
+    font-weight: 400;
+  }
+  &_logo {
+    width: 12rem;
+    filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.15));
+    margin-bottom: 1rem;
+  }
+
+  &_form {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 0;
+    background-color: 0;
+    padding: 1rem 1rem;
+    gap: 1rem;
+  }
+
+  &_input {
+    height: 3rem;
+    width: 100%;
+    border: 1px solid rgb(207, 207, 207);
+    background-color: white;
+    border-radius: 0.2rem;
+    padding: 0 1rem;
+    box-sizing: content-box;
+    &:focus {
+      outline: 1px solid #13698a;
+    }
+    animation: InputGetIn forwards 0.5s ease-in-out;
+  }
+  &_button {
+    border: 0;
+    color: white;
+    background-color: #13698a;
+    padding: 0.6rem 1.2rem;
+    width: 8rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    font-size: 1rem;
+    box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
+    cursor: pointer;
+  }
+  &_button:hover {
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+  }
+  &_ResetPassword {
+    font-size: 1.1em;
+    color: #13698a;
+    font-weight: 300;
+    text-align: center;
+    &:hover {
+      color: #c0c0c0;
+    }
+  }
+}
+@media (max-width: 600px) and (orientation: portrait) {
+  .login-form {
+    width: 90%;
+  }
+  .login {
+    &_content {
+      // border: 0;
+    }
+  }
+}
+
+@keyframes InputGetIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,100 @@
+.newProperty {
+  width: 100%;
+  min-height: 100%;
+  padding: 2rem;
+  &_form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    &_group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      & > label {
+        font-size: 1.2em;
+        font-weight: 600;
+      }
+      &-text {
+        grid-column: 1/2;
+      }
+      &-select {
+        grid-column: 1/2;
+        & > select {
+          height: 3rem;
+          width: 30rem;
+          border: 1px solid #ccc;
+          border-radius: 0.5rem;
+          padding: 0.7rem 1rem;
+          font-size: 1.2em;
+        }
+      }
+      &-textarea {
+        grid-column: 1/2;
+      }
+      &-file {
+        grid-column: 2/3;
+        grid-row: 1/4;
+      }
+      &-radio {
+        display: flex;
+        gap: 1rem;
+        grid-column: 1/2;
+        &_inputs {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 1rem;
+          & > div {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            & > input:checked + label {
+              background-color: cadetblue;
+              color: white;
+            }
+            & > label {
+              font-size: 1.2em;
+              background-color: rgb(240, 240, 240);
+              border: 1px solid rgb(220, 220, 220);
+              height: 3rem;
+              border-radius: 0.4rem;
+              min-width: 10rem;
+              width: 100%;
+              max-width: 13rem;
+              padding: 1rem;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              box-sizing: border-box;
+              cursor: pointer;
+              transition: all 0.2s;
+            }
+            & > input {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+
+    &_input {
+      height: 3rem;
+      width: 30rem;
+      border: 1px solid #ccc;
+      border-radius: 0.5rem;
+      padding: 0.7rem 1rem;
+      font-size: 1.2em;
+    }
+    &_textarea {
+      min-height: 7rem;
+      max-height: 12rem;
+      resize: vertical;
+      width: 30rem;
+      border: 1px solid #ccc;
+      border-radius: 0.5rem;
+      padding: 0.7rem 1rem;
+      font-size: 1.2em;
+    }
+  }
+}
