@@ -8,7 +8,7 @@ export function Header({ isFixed }: any) {
         <Link href="dash/meus-imoveis/novo">Anunciar</Link>
 
         <button>
-          <Link href="dash/acesso">Acesso privado</Link>
+          <Link href="dash/login">Acesso privado</Link>
         </button>
       </div>
     </header>

@@ -1,3 +1,5 @@
+import { GetServerSideProps } from "next";
+import { parseCookies } from "nookies";
 import HeaderComp from "./header";
 import Sidebar from "./sidebar";
 
@@ -17,3 +19,17 @@ export function Layout({ children, title, user }: any) {
     </div>
   );
 }
+export const getServerSideProps: GetServerSideProps = async (ctx: any) => {
+  const { token, user_name } = parseCookies(ctx);
+  if (!token && ctx) {
+    return {
+      redirect: {
+        destination: "/dash",
+        permanent: false,
+      },
+    };
+  }
+  return {
+    props: {},
+  };
+};

@@ -57,10 +57,10 @@ export default function Login() {
           <button className="login_button" type="submit">
             Entrar
           </button>
-          <Link href="/register" className="login_ResetPassword">
+          <Link href="/dash/register" className="login_ResetPassword">
             <span> Não tem uma conta?</span> Cadastre-se!
           </Link>
-          <Link href="/reset-password" className="login_ResetPassword">
+          <Link href="/dash/reset-password" className="login_ResetPassword">
             Esqueci minha senha!
           </Link>
         </form>
