@@ -8,7 +8,7 @@ export default function Catalogo() {
     queryFn: getInitialData,
   });
   async function getInitialData() {
-    const response = await api.get("/imoveis");
+    const response = await api.get("/properties");
     return response.data;
   }
   return (
