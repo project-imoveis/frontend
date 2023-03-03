@@ -6,7 +6,10 @@ export function Header({ isFixed }: any) {
       <h1>Imóveis</h1>
       <div className="header_group">
         <Link href="dash/meus-imoveis/novo">Anunciar</Link>
-        <button>Acesso privado</button>
+
+        <button>
+          <Link href="dash/acesso">Acesso privado</Link>
+        </button>
       </div>
     </header>
   );

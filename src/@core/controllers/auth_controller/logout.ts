@@ -6,5 +6,5 @@ export const logout = () => {
   nookies.destroy(null, "user_email", { path: "/" });
   nookies.destroy(null, "user_uuid", { path: "/" });
   nookies.destroy(null, "user_type", { path: "/" });
-  Router.push("/login");
+  Router.push("/dash/acesso");
 };

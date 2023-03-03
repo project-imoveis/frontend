@@ -38,7 +38,7 @@ export const login = async (data: loginProps) => {
       secure: true,
     });
 
-    router.push("/");
+    router.push("/dash");
 
     toast("Login bem sucedido!", { hideProgressBar: true, autoClose: 2000, type: "success" });
 

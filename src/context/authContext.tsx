@@ -1,5 +1,4 @@
-import router from "next/router";
-import React, { createContext, useCallback, useEffect } from "react";
+import React, { createContext } from "react";
 import { login, register, logout, getData } from "../@core/controllers/auth_controller";
 import { AuthContextType, AuthProviderProps } from "../@core/models/auth_model";
 

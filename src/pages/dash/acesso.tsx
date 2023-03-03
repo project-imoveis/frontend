@@ -1,11 +1,11 @@
-import React, { ChangeEvent, FormEvent, useState, useEffect } from "react";
+import React, { ChangeEvent, FormEvent, useState } from "react";
 import Link from "next/link";
-import useAuth from "../hooks/useAuth";
+import useAuth from "../../hooks/useAuth";
 import { parseCookies } from "nookies";
 import { GetServerSideProps } from "next";
 
 export default function Login() {
-  const { login, getData } = useAuth();
+  const { login } = useAuth();
 
   const defaultValues = {
     email: "",
@@ -74,7 +74,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx: any) => {
   if (token && ctx) {
     return {
       redirect: {
-        destination: "/visaogeral",
+        destination: "/dash",
         permanent: false,
       },
     };
