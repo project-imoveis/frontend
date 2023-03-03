@@ -15,8 +15,8 @@ export default function Sidebar() {
       icon: BsFillGridFill,
     },
     {
-      name: "Imóveis",
-      href: "/dash/seus-imoveis",
+      name: "Meus Imóveis",
+      href: "/dash/meus-imoveis",
       icon: AiOutlineProfile,
     },
   ];
