@@ -3,6 +3,8 @@ import Link from "next/link";
 import useAuth from "../../hooks/useAuth";
 import { parseCookies } from "nookies";
 import { GetServerSideProps } from "next";
+import { FcGoogle } from "react-icons/fc";
+import { BsFacebook } from "react-icons/bs";
 
 export default function Login() {
   const { login } = useAuth();
@@ -36,7 +38,15 @@ export default function Login() {
         <div className="login_logo"></div>
 
         <h1>Fazer login</h1>
-        <h2>Use sua conta Imoveis</h2>
+        <div className="login_content_loginSocial">
+          <button>
+            <FcGoogle />
+          </button>
+          <button>
+            <BsFacebook />
+          </button>
+        </div>
+        <h2>use sua conta Imoveis</h2>
         <form method="POST" className="login_form" onSubmit={(event) => handleSubmit(event)}>
           <input
             className="login_input"
