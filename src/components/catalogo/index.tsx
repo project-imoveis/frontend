@@ -13,7 +13,13 @@ export default function Catalogo() {
   }
   return (
     <section className="catalogo">
-      <h1>Imóveis à venda</h1>
+      <div className="catalogo_tags">
+        <article>Venda</article>
+        <article>Aluguel</article>
+        <article>Casa</article>
+        <article>Apartamento</article>
+      </div>
+      <h1>Imóveis que baixaram de preço em até 10% próximos a você</h1>
       <div className="catalogo_properties">
         {isLoading ? (
           <p>Carregando...</p>
