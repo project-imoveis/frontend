@@ -4,7 +4,7 @@ export function Banner() {
       <div className="banner_photo"></div>
       <h1>Seu site de imóveis</h1>
       <div className="banner_inputGroup">
-        <input placeholder="Digite cidade, bairro ou logadouro" />
+        <input placeholder="Digite a cidade, bairro ou logadouro" />
         <button>Pesquisar</button>
       </div>
     </section>

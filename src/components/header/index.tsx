@@ -1,17 +1,37 @@
 import Link from "next/link";
+import { parseCookies } from "nookies";
+import { useState, useEffect } from "react";
 
 export function Header({ isFixed }: any) {
+  const [userName, setUserName] = useState<string | null>(null);
+  const { user_name } = parseCookies();
+  useEffect(() => {
+    setUserName(user_name);
+  }, [user_name]);
   return (
     <header className={`header ${isFixed && "header-fixed"}`}>
-      <Link href="/">
-        <h1>Imóveis</h1>
-      </Link>
       <div className="header_group">
-        <Link href="dash/meus-imoveis/novo">Anunciar</Link>
-
-        <button>
-          <Link href="dash/login">Acesso privado</Link>
+        <Link href="/">
+          <h1>Imóveis</h1>
+        </Link>
+        <div className="header_group-options">
+          <Link href="#">Aluguel</Link>
+          <Link href="#">Venda</Link>
+        </div>
+      </div>
+      <div className="header_group">
+        <button className="header_group-anunciar">
+          <Link href="dash/meus-imoveis/novo">Anunciar</Link>
         </button>
+        {userName ? (
+          <Link href="dash" className="header_group-user">
+            Olá, {userName}
+          </Link>
+        ) : (
+          <Link href="dash/login" className="header_group-user">
+            Entrar
+          </Link>
+        )}
       </div>
     </header>
   );
