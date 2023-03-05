@@ -11,7 +11,7 @@ export function Header({ isFixed }: any) {
   return (
     <header className={`header ${isFixed && "header-fixed"}`}>
       <div className="header_group">
-        <Link href="/">
+        <Link className="header_group-logo" href="/">
           <h1>Imóveis</h1>
         </Link>
         <div className="header_group-options">
@@ -20,9 +20,10 @@ export function Header({ isFixed }: any) {
         </div>
       </div>
       <div className="header_group">
-        <button className="header_group-anunciar">
-          <Link href="dash/meus-imoveis/novo">Anunciar</Link>
-        </button>
+        <Link className="header_group-anunciar" href="dash/meus-imoveis/novo">
+          Anunciar
+        </Link>
+
         {userName ? (
           <Link href="dash" className="header_group-user">
             Olá, {userName}
