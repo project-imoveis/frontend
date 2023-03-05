@@ -1,4 +1,4 @@
-import "../styles/index.scss";
+import "@/styles/index.scss";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import type { AppProps } from "next/app";

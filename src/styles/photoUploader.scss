@@ -1,0 +1,103 @@
+.photoUploader {
+  grid-column: 2/3;
+  grid-row: 1/4;
+  height: fit-content;
+  margin: 2rem;
+  & > h2 {
+    margin-bottom: 0.5rem;
+  }
+
+  &_group {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    height: 14rem;
+    overflow: hidden;
+    overflow-x: auto;
+  }
+  &_input {
+    display: none;
+    position: absolute;
+    height: 13rem;
+    min-width: 12rem;
+    max-width: 12rem;
+  }
+  &_label {
+    border: 2px dashed black;
+    height: 13rem;
+    min-width: 12rem;
+    max-width: 12rem;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    cursor: pointer;
+    &:hover {
+      background-color: #f5f5f5;
+    }
+  }
+
+  &_imageWrapper {
+    height: 13rem;
+    min-height: 13rem;
+    min-width: 12rem;
+    width: 12rem;
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 1px solid rgb(200, 200, 200);
+
+    &:first-of-type {
+      border: 5px solid #f1c40f;
+    }
+    &:first-of-type > &_title {
+      z-index: 1;
+      position: relative;
+      text-align: center;
+      margin-top: 0.5rem;
+      color: #000000;
+    }
+    &_image {
+      width: auto !important;
+    }
+    &_legenda {
+      position: absolute;
+      z-index: 1;
+      bottom: 0;
+      background-color: white;
+      width: 100%;
+      height: 2rem;
+      padding: 0 1rem;
+    }
+    &:hover > &_close {
+      display: flex;
+    }
+    &_close {
+      margin: 0.5rem;
+      height: 2rem;
+      width: 2rem;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      & > svg {
+        font-size: 2em;
+        fill: black;
+        &:hover {
+          fill: rgb(75, 75, 75);
+        }
+      }
+    }
+  }
+  &_span {
+    font-size: 0.8rem;
+    font-weight: 400;
+    padding-left: 0.5rem;
+  }
+}
