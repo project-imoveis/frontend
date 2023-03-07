@@ -29,7 +29,7 @@
     width: 100%;
   }
   &_label {
-    border: 2px dashed black;
+    border: 2px dashed rgb(200, 200, 200);
     height: 13rem;
     min-width: 12rem;
     max-width: 100%;
@@ -43,6 +43,13 @@
     cursor: pointer;
     &:hover {
       background-color: #f5f5f5;
+      border: 2px dashed rgb(100, 100, 100);
+    }
+    &_isDragActive {
+      background-color: rgb(30, 190, 83, 0.5);
+    }
+    &_isDragReject {
+      background-color: rgba(190, 30, 30, 0.8);
     }
   }
   &_imageWrapper {
@@ -55,6 +62,7 @@
     overflow: hidden;
     border: 1px solid rgb(200, 200, 200);
     display: flex;
+    cursor: move;
     justify-content: center;
     &_title {
       display: none;
@@ -106,9 +114,21 @@
         font-size: 2em;
         fill: black;
         &:hover {
-          fill: rgb(75, 75, 75);
+          fill: rgb(150, 150, 150);
         }
       }
+    }
+  }
+  &_button {
+    height: 2rem;
+    padding: 0 2rem;
+    border-radius: 1rem;
+    background: rgb(46 139 87);
+    color: white;
+    margin-top: 1rem;
+    &:disabled {
+      background: rgb(200 200 200);
+      color: rgb(150 150 150);
     }
   }
   &_span {
