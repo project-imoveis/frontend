@@ -9,4 +9,6 @@ export type PropertyType = {
   total_area: number | null;
   post_type: string;
   usage_type: string;
+  Images: any;
+  Address: any;
 };
