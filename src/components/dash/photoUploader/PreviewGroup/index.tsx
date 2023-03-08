@@ -1,20 +1,20 @@
 import { DragDropContext, Droppable, Draggable } from "@hello-pangea/dnd";
 import Image from "next/image";
 import { BsTrash } from "react-icons/bs";
-export default function PreviewGroup({ photos, removePhoto, onDragEnd }: any) {
+export default function PreviewGroup({ images, removeItem, onDragEnd }: any) {
   return (
     <DragDropContext onDragEnd={onDragEnd}>
       <Droppable droppableId="droppable" type="COLUMN" direction="horizontal">
         {(provided) => (
           <>
-            <p>{photos.length}/20 fotos</p>
+            <p>{images.length}/20 fotos</p>
             <div
               className="photoUploader_previewGroup"
               {...provided.droppableProps}
               ref={provided.innerRef}
             >
-              {photos.map((photo: any, id: number) => (
-                <Draggable key={photo.name} draggableId={photo.name} index={id}>
+              {images.map((image: any, id: number) => (
+                <Draggable key={image.name} draggableId={image.name} index={id}>
                   {(provided) => (
                     <div
                       className="photoUploader_imageWrapper"
@@ -26,7 +26,7 @@ export default function PreviewGroup({ photos, removePhoto, onDragEnd }: any) {
                       <button
                         type="button"
                         className="photoUploader_imageWrapper_close"
-                        onClick={() => removePhoto(id)}
+                        onClick={() => removeItem(id)}
                       >
                         <BsTrash />
                       </button>
@@ -34,16 +34,17 @@ export default function PreviewGroup({ photos, removePhoto, onDragEnd }: any) {
                         className="photoUploader_imageWrapper_image"
                         placeholder="blur"
                         blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQC"
-                        src={photo.preview}
+                        src={image.preview}
                         alt="foto"
                         fill
                         onLoad={() => {
-                          URL.revokeObjectURL(photo.preview);
+                          URL.revokeObjectURL(image.preview);
                         }}
                       />
                       <input
                         className="photoUploader_imageWrapper_legenda"
                         placeholder="Legenda..."
+                        id={`${id}_legenda_id`}
                       />
                     </div>
                   )}
