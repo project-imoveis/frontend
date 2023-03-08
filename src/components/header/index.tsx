@@ -14,14 +14,10 @@ export function Header({ isFixed }: any) {
         <Link className="header_group-logo" href="/">
           <h1>Imóveis</h1>
         </Link>
-        <div className="header_group-options">
-          <Link href="#">Aluguel</Link>
-          <Link href="#">Venda</Link>
-        </div>
       </div>
       <div className="header_group">
         <Link className="header_group-anunciar" href="dash/meus-imoveis/novo">
-          Anunciar
+          Anuncie aqui
         </Link>
 
         {userName ? (

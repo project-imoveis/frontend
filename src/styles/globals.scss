@@ -4,7 +4,10 @@
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono",
     "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono",
     "Courier New", monospace;
-
+  --main-color-green: rgb(115, 183, 122);
+  --main-color-green-opaque: rgba(115, 183, 122, 0.8);
+  --secondary-color-orange: rgb(255, 153, 0);
+  --secondary-color-orange-opaque: rgb(255, 153, 0, 0.8);
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
