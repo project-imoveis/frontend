@@ -8,8 +8,13 @@ type PropertyCardProps = {
   key: number;
   property: PropertyType;
 };
-export default function PropertyCard({ key, property }: PropertyCardProps) {
-  function randomImage() {
+export default function PropertyCard({ property }: PropertyCardProps) {
+  function getMainImage() {
+    if (property.Images.length > 0) {
+      const mainImage = property.Images.find((image: any) => image.isMain == true);
+      if (mainImage) return mainImage.url;
+      return property.Images[0].url;
+    }
     const images = [propertyPhoto1, propertyPhoto2, propertyPhoto3];
     const random = Math.floor(Math.random() * images.length);
     return images[random];
@@ -18,7 +23,7 @@ export default function PropertyCard({ key, property }: PropertyCardProps) {
   return (
     <article className="propertyCard">
       <div className="propertyCard_image">
-        <Image src={randomImage()} alt="foto do imóvel" />
+        <Image src={getMainImage()} alt="foto do imóvel" fill />
       </div>
       <div className="propertyCard_description">
         <h2>{property.post_type}</h2>
@@ -27,7 +32,4 @@ export default function PropertyCard({ key, property }: PropertyCardProps) {
       </div>
     </article>
   );
-}
-function useEffect(arg0: () => void, arg1: never[]) {
-  throw new Error("Function not implemented.");
 }
