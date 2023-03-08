@@ -43,8 +43,9 @@ export function Banner() {
             <button className="banner_searchForm_group-searchButton">Buscar</button>
           </div>
           <div className="banner_searchForm_group">
-            <p>Explorar imóveis</p>
+            <a>Explorar imóveis</a>
           </div>
+          <a></a>
         </form>
         <div className="banner_sideImage">
           <Image className="banner_sideImage-image" src={livingRoom} alt="living room" />
