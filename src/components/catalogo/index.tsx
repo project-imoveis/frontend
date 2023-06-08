@@ -34,16 +34,21 @@ export default function Catalogo() {
         <div className="catalogo_properties_carousel">
           {isLoading ? (
             <p>Carregando...</p>
+          ) : isError ? (
+            <p>Não foi possível carregar</p>
           ) : (
             data.map((property: any, id: any) => <PropertyCard key={id} property={property} />)
           )}
         </div>
       </div>
+
       <div className="catalogo_properties">
         <h1>Baixaram de preço</h1>
         <div className="catalogo_properties_carousel">
           {isLoading ? (
             <p>Carregando...</p>
+          ) : isError ? (
+            <p>Não foi possível carregar</p>
           ) : (
             data.map((property: any, id: any) => <PropertyCard key={id} property={property} />)
           )}
@@ -57,6 +62,8 @@ export default function Catalogo() {
         <div className="catalogo_properties_carousel">
           {isLoading ? (
             <p>Carregando...</p>
+          ) : isError ? (
+            <p>Não foi possível carregar</p>
           ) : (
             data.map((property: any, id: any) => <PropertyCard key={id} property={property} />)
           )}
